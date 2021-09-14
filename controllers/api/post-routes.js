@@ -81,6 +81,7 @@ router.get('/:id', (req, res) => {
 
 //create a post
 router.post('/', (req, res) => {
+    console.log("POST", req);
     // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
     Post.create({
         title: req.body.title,
